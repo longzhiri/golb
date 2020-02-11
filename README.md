@@ -1,4 +1,8 @@
-# golb [![Doc](https://img.shields.io/badge/go-doc-blue.svg)](https://godoc.org/github.com/longzhiri/golb) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/longzhiri/gocp/blob/master/LICENSE)
+# golb 
+[![Doc](https://img.shields.io/badge/go-doc-blue.svg)](https://godoc.org/github.com/longzhiri/golb)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/longzhiri/gocp/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/longzhiri/golb/branch/master/graph/badge.svg)](https://codecov.io/gh/longzhiri/golb)
+[![Build Status](https://travis-ci.org/longzhiri/golb.svg?branch=master)](https://travis-ci.org/longzhiri/golb)
 
 NGINX-like load-balancing method implementation in **Go**
 

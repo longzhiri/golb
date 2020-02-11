@@ -125,11 +125,15 @@ type Peer struct {
 }
 
 // NewPeer creates a new peer.
+//
 // address: Peer's address, can be anything defined by uses, such as tcp/udp address (ip:port), unix domain socket addr(),
 // but each peer's address must be unique.
+//
 // weight: The weight of the peer server, it will be set to 1 if weight is passed less than 0.
+//
 // maxFails, failTimeout: Sets the number of unsuccessful attempts to communicate with the server that should happen in the duration set by the failTimeout
 // parameter to consider the server unavailable for a duration also set by the failTimeout parameter. The zero value of maxFails disables the  accounting of attempts.
+//
 // maxConns: Limits the maximum number of simultaneous active connections to the peer server, the zero value disables the limitation.
 func NewPeer(address string, weight int, maxFails int, failTimeout time.Duration, maxConns int) *Peer {
 	peer := &Peer{
