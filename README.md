@@ -86,21 +86,24 @@ if err == nil {
 chl.RemovePeer("10.11.11.12")
 chl.AddPeer(NewPeer("10.11.11.13", 1, 3, 10*time.Second, 0))
 
-	// Instantiates a ip-hash LB
-	ih := NewIpHashLB(peers)
-	peer, err = ih.GetPeer(net.ParseIP("1.1.1.1"), false)
-	if err == nil {
-		ih.FreePeerConnection(peer, true)
-	}
-	ih.RemovePeer("10.11.11.12")
-	ih.AddPeer(NewPeer("10.11.11.13", 1, 3, 10*time.Second, 0))
+// Instantiates a ip-hash LB
+ih := NewIpHashLB(peers)
+peer, err = ih.GetPeer(net.ParseIP("1.1.1.1"), false)
+if err == nil {
+	ih.FreePeerConnection(peer, true)
+}
+ih.RemovePeer("10.11.11.12")
+ih.AddPeer(NewPeer("10.11.11.13", 1, 3, 10*time.Second, 0))
 
-	// Instantiates a least-conn LB
-	rl := NewRandomLB(peers)
-	peer, err = rl.GetPeer()
-	if err == nil {
-		rl.FreePeerConnection(peer, true)
-	}
-	rl.RemovePeer("10.11.11.12")
-	rl.AddPeer(NewPeer("10.11.11.13", 1, 3, 10*time.Second, 0))
+// Instantiates a least-conn LB
+rl := NewRandomLB(peers)
+peer, err = rl.GetPeer()
+if err == nil {
+	rl.FreePeerConnection(peer, true)
+}
+rl.RemovePeer("10.11.11.12")
+rl.AddPeer(NewPeer("10.11.11.13", 1, 3, 10*time.Second, 0))
 ```
+
+# License
+The MIT License (MIT)
