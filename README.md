@@ -19,12 +19,16 @@ Supported load balancing methods are:
 	
 	least-conn: Picks a peer server which has the least number of connections.
 	
-	hash: Applies crc32 hash to  a key provided by caller and maps to a peer server. The same key will always be mapped to the same peer sever unless the peer doesn't
-	meet other requirements, such as reaches the max_conns limitation.
+	hash: Applies crc32 hash to  a key provided by caller and maps to a peer server. 
+	The same key will always be mapped to the same peer sever unless the peer doesn't meet other requirements, 
+	such as reaches the max_conns limitation.
 	
-	consistent hash: Picks a peer as hash, and ensures that  a few keys will be remapped to different servers when a server is added to or removed.
+	consistent hash: Picks a peer as hash, and ensures that  a few keys will be remapped to different servers 
+	when a server is added to or removed.
 	
-	ip-hash: Picks a peer as hash, but uses ip as key, specially  uses the first three bytes of ipv4 address  and uses total of ipv6 address.
+	ip-hash: Picks a peer as hash, but uses ip as key, specially  uses the first three bytes of ipv4 address  
+	and uses total of ipv6 address.
+	
 	random: Picks a peer at random.
 
 Supported peer server parameters are:
@@ -33,9 +37,9 @@ Supported peer server parameters are:
 	
 	max_conns: Limits the maximum number of simultaneous active connections to the peer server.
 	
-	max_fails, fail_timeout: Sets the number of unsuccessful attempts to communicate with the server that should happen in the duration set by the fail_timeout
-	
-	parameter to consider the server unavailable for a duration also set by the fail_timeout parameter.
+	max_fails, fail_timeout: Sets the number of unsuccessful attempts to communicate with the server that 
+	should happen in the duration set by the fail_timeout parameter to consider the  server unavailable for 
+	a duration also set by the fail_timeout parameter.
 
 See [godoc](https://godoc.org/github.com/longzhiri/golb) in details.
 
